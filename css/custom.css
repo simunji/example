@@ -1,0 +1,466 @@
+/* custom.scss */    
+
+/* import the necessary Bootstrap files */
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+/* -------begin customization-------- */   
+
+/* simply assign the value */ 
+$body-bg: #eeeeee;
+
+/* or, use an existing variable */
+/*
+$theme-colors: (
+  primary: #004088;
+);
+*/ 
+/*
+:root {
+    --blue: #004088;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+*/
+.navbar-b.navbar-reduce .nav-link {
+    color: #2d364c;
+}
+
+.navbar-b.navbar-reduce .nav-link:hover {
+    color: #dd8200;
+}
+
+.btn-primary{
+	background-color: #004088;
+	border-color: #004088 !important;
+	/*box-shadow:  0px 0px 3px #ddd;*/
+}
+
+.btn-primary:hover {
+	background-color: #dd8200;
+	border-color: #004088;
+}
+
+.button-a {
+  background-color: #004088;
+  border-color: #004088;
+}
+
+.hvr-underline-from-center{
+padding: 10px;	
+width:200px;
+font-size: 50px;
+cursor: pointer;
+border-radius: 8px;
+box-shadow: 3px 3px 3px #000;	
+}
+
+.btn-primary {
+    border-color: none;
+}
+
+.button-a:hover {
+  background-color: #dd8200;
+  border-color: #dd8200 !important;
+}
+
+
+}
+
+#arch{
+  font-size: 65px;
+}
+
+.alert-success {
+    color: #fff;
+    background-color: #dd8200;
+    border-color: none;
+}
+
+.navbar-b.navbar-reduce {
+    transition: all .5s ease-in-out;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+	color: #004088;
+}
+
+.navbar-b.navbar-reduce .show > .nav-link, .navbar-b.navbar-reduce .active > .nav-link, .navbar-b.navbar-reduce .nav-link.show, .navbar-b.navbar-reduce .nav-link.active {
+    color: #dd8200;
+}
+
+.navbar-b.navbar-reduce .show > .nav-link, .navbar-b.navbar-reduce .active > .nav-link, .navbar-b.navbar-reduce .nav-link.show, .navbar-b.navbar-reduce .nav-link.active:hover {
+    color: #dd8200;
+}
+
+.navbar-b.navbar-trans .nav-link, .navbar-b.navbar-reduce .nav-link {
+    color: #004088;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.navbar-b.navbar-reduce .nav-link::before {
+    background-color: #dd8200;
+}
+
+.nav-item{
+	border-color: none;
+}
+
+.overlay-mf {
+    background-color: #004088;
+}
+
+.navbar-b .navbar-brand {
+    color: #004088;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.navbar-b.navbar-reduce .nav-link {
+    color: #004088;
+}
+
+.navbar-b.navbar-reduce .navbar-brand {
+    color: #004088;
+}
+
+.navbar-b.navbar-trans .show > .nav-link, .navbar-b.navbar-trans .active > .nav-link, .navbar-b.navbar-trans .nav-link.show, .navbar-b.navbar-trans .nav-link.active {
+    color: #dd8200;
+}
+
+.navbar-b.navbar-trans .nav-link:hover {
+    color: #dd8200;
+	text-decoration: none;
+}
+
+.navbar-b .navbar-brand {
+    color: #004088;
+}
+
+.skill-mf .progress .progress-bar {
+    background-color: #004088;
+}
+
+.line-mf {
+    background-color: #004088;
+	display: none;
+}
+
+.service-box:hover .ico-circle {
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: #004088;
+	border-color: 1px #004088;
+}
+
+.ico-circle {
+    box-shadow: 0 0 0 10px #004088;
+ }
+ 
+ 
+ .service-box .ico-circle {
+    color: #dd8200;
+}
+
+.title-a {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.work-content .w-more .w-ctegory {
+    color: #004088;
+}
+
+.ion-ios-plus-outline {
+    font-size: 2.5rem;
+    color: #004088;
+}
+
+.back-to-top {
+	background-color: #004088;
+}
+
+.nav-link:hover {
+  text-decoration-color: #E18728;
+}
+
+.getInTouch,
+.messageMe {
+    font-size: 2rem;
+	margin-bottom: 50px;
+}
+
+
+/*New portfolio section*/
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+
+.filter-button {
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    background-color: #fd7e14;
+}
+
+.filter-button:hover
+{
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    background-color: #e97903;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #004088;
+    color: white;
+	border: 1px solid #004088;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.6rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.icon {
+  padding: 10px;
+  background: #cfcfcf;
+  color: #ff8200;
+  min-width: 80px;
+ 
+  text-align: center;
+}
+
+.fa-inbox{
+ padding-top: 50px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+  outline: none;
+}
+
+.intro {
+    color: #fefefe;
+}
+
+.footer-banner{
+	background-color: #dd8200;
+	padding: 1px;
+}
+
+.footer-baner{
+	background-color: #004088;;
+	padding: 0.5px;
+}
+
+footer{
+	padding: 30px;
+   	color: #000;
+    background-position: centre;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.credits a:link{
+	color: #ff0000;
+}
+
+.back-to-top:hover {
+	background-color: #dd8200;
+}
+
+input["type=text"]{
+	onclick:;
+	background-color: yellow; 
+}
+
+.ico-circle {
+    box-shadow: 0 0 0 7px #004088;
+}
+
+.socials .ico-circle{
+box-shadow: none;
+}
+
+
+.socials .ico-circle.fb:hover {
+  background-color: #fff;
+  color: #4b68b0;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+.socials .ico-circle.lk:hover {
+  background-color: #fff;
+  color: #0677b6;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+.socials .ico-circle.tt:hover {
+  background-color: #fff;
+  color: #37b2e1;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+.logo{
+width: 150px;
+height: auto;
+}
+
+/*
+ .ico-circle1,.socials .ico-circle {
+    height: 40px;
+    width: 40px;
+	color: #ffffff;
+    font-size: 1.7rem;
+    border:none;
+    line-height: 1.4;
+    margin: 0 15px 0 0;
+    box-shadow: none;
+	background-color: #004088;
+    transition: all 500ms ease;
+}
+
+
+.ion-social-facebook:hover{
+	color: #4b68b0;
+}
+
+.ion-social-linkedin:hover{
+	color: #0677b6;
+}
+
+.ion-social-twitter:hover{
+	color: #37b2e1;
+}
+
+*/
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+
+/*form with icons start
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.form-group {
+  display: -ms-flexbox; /* IE10 
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.icon {
+  padding: 10px;
+  background: #cfcfcf;
+  color: #ff8200;
+  min-width: 50px;
+ 
+  text-align: center;
+}
+
+.fa-inbox{
+ padding-top: 50px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 5px solid dodgerblue;
+}
+
+ Set a style for the submit button 
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+form with icons start */

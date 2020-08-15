@@ -1,0 +1,33 @@
+
+.button:hover {
+  background-color: #ff8200;
+  color: #fff;
+  transition: all 500ms ease;
+}
+
+.button-a {
+  background-color: #0078ff;
+  color: #fff;
+  border-color: #cde1f8;
+}
+
+.button-big {
+  padding: .9rem 2.3rem;
+  font-size: 1.2rem;
+}
+
+.button-rouded {
+  border-radius: 0px;
+}
+
+#arch{
+  font-size: 45px;
+  font-weight: 600;
+  font-size: 4.5rem;
+}
+
+.service-box .s-title {
+    font-size: 1.4rem;
+    text-transform: none;
+    text-align: center;
+    padding: .4rem 0;
