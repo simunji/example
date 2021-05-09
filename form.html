@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|IBM+Plex+Sans:600,600i"
+      rel="stylesheet">
+<style>
+
+html, body {0
+margin: 0;
+font-family: helvetica;
+box-sizing: border-box;
+background: radial-gradient(1000px 900px,
+      #feff00 0%, #8a8a11 100%);
+transition: all 0.9 ease
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container{
+	margin: 0 auto;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+textarea,input {
+padding: 5px 10px;
+width: 100%;
+color: #360865;
+font-size: 16px;
+}
+
+input:focus {
+  border: 2px solid #b26df9;
+  outline: none;
+}
+
+
+label{
+display: block;
+margin-bottom: 5px;
+margin-top: 15px;
+font-weight: bold;
+font-size: 16px;
+color: #4d2478;
+}
+
+.form-button {
+ text-align: center;
+}
+
+#textarea-id{
+font-size: 16px !important;
+}
+
+button {
+  background: linear-gradient(#7e00ff, #a04cf5);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  font-weight: bold;
+}
+
+ button:hover{
+  background: linear-gradient(#360865, #a04cf5);
+  padding: 10px 35px;
+  transition: all 0.9 ease
+  }
+  
+ .avator-wrapper {
+	display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 auto;
+  	width:300px;
+    margin-bottom: -80px;
+}
+
+h3, p {
+   line-height: 1.2em;
+   text-align: center;
+}
+
+.circle{
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #a04cf5;
+  margin-top: 40px;
+}
+
+.circle:hover{
+cursor: pointer;
+}
+
+hr {
+border-top: 1px dashed purple;
+}
+
+form{
+margin-bottom: 50px;
+}
+
+/* media query for screens @max 400px*/
+
+@media (max-width: 400px){
+
+.container{
+    width: 100%;
+}
+
+label{
+font-size: 13px;
+
+}
+
+.circle{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 12px;
+  
+}
+
+ .avator-wrapper {
+  	width:100%;
+    margin-bottom: -10px;
+}
+
+button {
+font-size: 16px;
+padding: 8px 20px;
+}
+
+button:hover {
+font-size: 12px;
+}
+
+
+}
+
+/* media query for screens @max 400px*/
+
+</style>
+</head>
+<body>
+<div class="avator-wrapper" title="User profile image not available">
+	  <p class="circle">
+      <h3>Have a message for us?</h3>
+      <p>Please fill this form to contact us. Or call in person at plot ... Off Musi-o-tunya Road, Woodlands Main, Lusaka, Zambia, Central Africa.
+      </p>
+      </p> 
+       </div>
+<div class="container">
+  <hr/>
+  <form action="/test" method="POST">
+    <label>Name</label><input type="text" required>
+    <label>Email</label><input type="text">
+    <label>Password</label> <input type="password">
+    <label>Confirm Password</label> 
+    <input type="password">
+    <label>Message</label><textarea id="textarea-id" columns="500" rows="3" style="font-size: 16px;"></textarea>
+     <p class="form-button">
+      <button type="button" onclick="send()">Send now</button>
+    </p>
+  </form>
+</div>
+<!--- Form button logic -->
+<script>
+function send(){
+  alert("Form has no backend configuration it can't submit any data!");
+  }
+</script>
+</body>
+</html>
+
