@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<meta name="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<style>
+		body{
+			background-color: skyblue;
+			font-size:18px;
+			font-family: sans-serif, helvitica-bold; 
+			
+		}
+
+		*, *:before, *:after{
+			box-sizing: border-box;
+			text-align: center;	
+		}
+
+		#bpost1, #bpost2, #bpost3, #bpost4 {
+			color: #333;
+			font-size:19px;
+			margin: 0 15px;
+			text-align: justify;
+			line-height: 1.6em;
+		}
+
+
+		a {
+			text-decoration: none;
+			color: blue;
+			font-family: sans-serif;
+			}	
+			
+			.fa {
+			font-family: sans-serif;
+			}
+			
+		/* color: #3c3c3c; */
+
+		.logo{
+			 margin-top: 20px;
+			 height: auto; 
+			 width: 150px;
+		}
+
+			#blog-post-wrapper {
+			background-color: white; 
+			width: 800px; 
+			margin:  0 auto; 
+			border-radius: 3px;
+			border-left: 15px solid skyblue;
+			box-shadow: 1px 1px 5px 1px #000000;
+			margin-top: 20px; 
+			margin-bottom: 40px;
+			padding: 30px;
+			}
+			
+			.last-updated, .fa, a[href="javascript:void(0)"]{
+				color: #828282;
+				font-size: 16px;
+			}
+		
+			.author-panel {
+			 font-size: 16px;
+			 margin-left: 10px;
+			 margin-bottom: 25px;
+			 color: #828282;
+			}
+			
+			ul{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin 10px;
+			}
+			
+			
+			li{
+			 list-style-type: none;
+			 border-radius: 2px;
+			 padding: 5px 5px;
+			 margin: 5px;
+			 background-color: whitesmoke;
+			}
+			
+			/*
+			li:hover{
+			  transition: all 1 ease;
+			  background-color: blue;
+			  cuesor: pointer;
+			}
+				*/
+	
+				.fa-facebook-square {
+				  color: #3c5a9a;
+				}
+				
+				.fa-comments {
+				  color: green;
+				}
+				
+				.fa-comments:hover{
+				  color: skyblue;
+				}
+				
+			   a:hover {
+				color: skyblue;
+				}
+				
+				 .fa-facebook-square:hover {
+				   color: skyblue;
+				}
+				
+				.fa-calendar {
+				 color: red;
+				}
+		
+			li a {
+			 font-size: 20px;
+			  color: blue;
+			  margin: 10px;
+			  margin-bottom: 13px;
+			}
+			
+			
+			
+			/*
+		  -webkit-transform: rotate(-8deg);
+		  -moz-transform: rotate(-8deg);
+		  -o-transform: rotate(-8deg);
+		  -ms-transform: rotate(-8deg);
+		  transform: rotate(-45deg);
+		}
+		*/
+			
+			/*
+		  -webkit-transform: rotate(-8deg);
+		  -moz-transform: rotate(-8deg);
+		  -o-transform: rotate(-8deg);
+		  -ms-transform: rotate(-8deg);
+		  transform: rotate(-45deg);
+		  }
+		  */
+		
+			h1, h2, h3{
+			margin-bottom: 30px;
+			}
+		
+		 p span{
+			margin: 30px auto 30px 30px;
+			margin-left: 30px;
+		}
+
+		.my-first-vuejs-app{
+			text-align: center;
+			color: #136536;
+		}
+
+	/* comment form styles */
+	
+	    form {
+		width: 555px;
+		margin: 0 auto;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}	
+	
+	
+	input, #btn{
+	width: 400px;
+	height: 3em;
+	margin: 5px 0;
+	border-radius: 3px;
+	padding: 8px;
+	color: black;
+	text-align: left;
+	font-size: 18px;
+	}
+	
+	textarea{
+	width: 400px;
+	height: 7em;
+	text-align: left;
+	}
+	
+	
+	#btn{
+	width: 402px;
+	font-size: 20px;
+	background-color: #dadb00;
+	color: black;
+	text-align: center;
+	margin-bottom: 25px 0;
+	height: 3em;
+	margin: 5px 0;
+	border-radius: 3px;
+	padding: 8px;
+	transition: transform 1s;
+	}
+	
+	#btn:hover{
+	background-color: skyblue;
+	cursor: pointer;
+	transform: translateY(-20px);
+	}
+	
+	
+	color: black;
+	text-align: left;
+	font-size: 18px;
+	
+	input:focus{
+	background-color: skyblue;
+	}
+	
+	
+		
+	
+	/* 
+		
+		background: radial-gradient(#25a45b, #2bc86e); 
+		}
+
+		@keyframes button {
+		  0% { box-shadow: 0 0 0 0 var(--hover); }
+		  
+		  * /
+		  
+	/* Grow rotate nav links animation */
+.hvr-grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+  color: skyblue;
+}	
+
+
+
+	</style>
+	</head>
+	<body>
+		<div class="header-container">
+			<img src="logo.png" class="logo">
+			<h1>Everyone Must be Saved in Jesus's Name Blog</h1>
+		</div>
+		<div class="nav-wrapper">
+		<nav>
+			<ul>
+				<li><a href="#" class="hvr-grow-rotate"	title="Home" onclick="myAlert();">Home</li></a>
+				<li><a href="#" class="hvr-grow-rotate"	title="Other Businesses" onclick="myAlert();">Other Businesses</li></a>
+				<li><a href="#" class="hvr-grow-rotate"	title="Archive" onclick="myAlert();">Archive</li></a>
+				<li><a href="#" class="hvr-grow-rotate"	title="Contacts" onclick="myAlert();">Contacts</li></a>
+			<ul>
+		</div>
+		<div id="blog-post-wrapper">
+			<h2>Blog Post Heading</h2>
+
+			<p class="author-panel">
+				<span>Author: <i class="fa fa-user" aria-hidden="true"></i>Admin </span>
+				
+				<span><a href="#" title="opens facebook.com in new window" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> 400 Comments</i></a></span>
+				
+			    <span><a href="http://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"> 279 Likes</span></i></a>
+			</p>
+			<p id="bpost1">
+				"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+				There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+				What is Lorem Ipsum?
+
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <a href="javascript:void(0);//expand paragraph" onclick="readMore1();"><em> read more...</em></a>
+			</p>
+			<p class="last-updated">
+				<span>Last updated:  <i class="fa fa-calendar" aria-hidden="true"></i>
+				18<sup>th </sup> April, 2021 at 10:46</span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> Leave a Comment</i></a></span>
+			</p>
+			<!-- comment form start-->
+				<form id="myform">
+		<table border="0">
+			<tr>
+			<td>Names</td>
+				<td align="center"><input name="firstName" id="fName" type="text" required="required" placeholder="Your name"></td>
+			</tr>
+			<tr>
+				<td><b>Email</b></td>
+				<td align="center"><input name="email" id="mail" type="text" required="required" placeholder="Your email address"></td>
+			</tr>
+			
+			<tr>
+				<td><b>Message</b></td>
+				<td align="center"><textarea name="textarea" id="textarea" placeholder="Your message" required="required"></textarea></td>
+			</tr>
+			<tr>
+			<td><b>Spam check:</b></td>
+			 <td  align="left"><input id="spam-check"  placeholder="What is 5 + 5?" required="required"></td>
+			</tr>
+			<td><b></b></td>
+				<td  align="center"><button id="btn" onclick="checkIt();">Button</button></td>
+			</tr>		
+		</table>
+	</form>
+		<!-- comment form end -->
+		
+		</div>
+		<div id="blog-post-wrapper">
+				<h2>Blog Post Heading</h2>
+			<p class="author-panel">
+				<span>Author: <i class="fa fa-user" aria-hidden="true"></i>Admin </span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> 400 Comments</i></a></span>
+				
+			    <span><a href="http://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"> 279 Likes</span></i></a>
+			</p>
+				<p id="bpost2">
+				"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+				"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+				What is Lorem Ipsum?
+
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <a href="javascript:void(0);" onclick="readMore2();"><em> read more...</em></a></p> 
+			<p class="last-updated">
+				<span>Last updated:  <i class="fa fa-calendar" aria-hidden="true"></i>
+				18<sup>th </sup> April, 2021 at 10:46</span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> Leave a Comment</i></a></span>
+			</p>
+
+		 </div>
+		<div id="blog-post-wrapper">
+				<h2>Blog Post Heading</h2>
+			<p class="author-panel">
+				<span>Author: <i class="fa fa-user" aria-hidden="true"></i>Admin </span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> 400 Comments</i></a></span>
+				
+			    <span><a href="http://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"> 279 Likes</span></i></a>
+			</p>
+				<p id="bpost3">
+				"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+				"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+				What is Lorem Ipsum?
+
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <a href="javascript:void(0);" onclick="readMore3();"><em> read more...</em></a></p>
+			<p class="last-updated">
+				<span>Last updated:  <i class="fa fa-calendar" aria-hidden="true"></i>
+				18<sup>th </sup> April, 2021 at 10:46</span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> Leave a Comment</i></a></span>
+			</p>
+		</div>
+				<div id="blog-post-wrapper">
+				<h2>Blog Post Heading</h2>
+			<p class="author-panel">
+				<span>Author: <i class="fa fa-user" aria-hidden="true"></i>Admin </span>
+				
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> 400 Comments</i></a></span>
+				
+			    <span><a href="http://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"> 279 Likes</span></i></a>
+			</p>
+			<p id="bpost4">
+				"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+				"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+			What is Lorem Ipsum?
+
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <a href="javascript:void(0);" onclick="readMore4();"><em> read more...</em></a></p>
+			<p class="last-updated">
+				<span>Last updated:  <i class="fa fa-calendar" aria-hidden="true"></i>
+				18<sup>th </sup> April, 2021 at 10:46</span>
+				<span><a href="#" onclick="comment();"><i class="fa fa-comments" aria-hidden="true"> Leave a Comment</i></a></span>
+			</p>
+			</div>
+	
+		<!-- Javascript -->
+<script>
+function readMore1(){
+let text1 = `"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+'<b>Why  we use it?</b><br>
+
+It is a 'long established fact that a reader will be distracted by the readable content  a page when looking at its layout. The point  using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their model text, and a search  lorem ipsum' will uncover many web sites still 'in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'`;
+						
+		document.getElementById("bpost1").innerHTML = text1;
+		}	
+
+function readMore2(){
+let text2 = `"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+'<b>Why  we use it?</b><br>
+
+It is a 'long established fact that a reader will be distracted by the readable content  a page when looking at its layout. The point  using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their model text, and a search  lorem ipsum' will uncover many web sites still 'in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'`;
+						
+		document.getElementById("bpost2").innerHTML = text2;
+		}
+
+
+function readMore3(){
+let text3 = `"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+'<b>Why  we use it?</b><br>
+
+It is a 'long established fact that a reader will be distracted by the readable content  a page when looking at its layout. The point  using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their model text, and a search  lorem ipsum' will uncover many web sites still 'in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'`;
+						
+		document.getElementById("bpost3").innerHTML = text3;
+		}	
+
+function readMore4(){
+let text4 = `"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+What is Lorem Ipsum?
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+'<b>Why  we use it?</b><br>
+
+It is a 'long established fact that a reader will be distracted by the readable content  a page when looking at its layout. The point  using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their model text, and a search  lorem ipsum' will uncover many web sites still 'in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'`;
+						
+		document.getElementById("bpost4").innerHTML = text4;
+		}			
+		
+			
+		
+		
+</script>
+<script>
+		
+		function checkIt(){
+			let spamCounter = document.getElementById("spam-check").value;
+			if(spamCounter !== 10 ){
+			alert("Validation failed. Try again");
+			}
+			 else{
+			alert("Thank you!");
+		}
+		}
+</script>
+			</div>
+			<p class="my-first-vuejs-app">©2020-2021. My first Vue.js App </p>
+	</body>
+</html>
